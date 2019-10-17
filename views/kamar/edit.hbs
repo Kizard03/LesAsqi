@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h3 class="text-center">Ubah Kamar</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/kamar/{{ kamar.id }}/update" method="post">
+                        <div class="form-group">
+                            <label for="inputNama">Nomor Kamar</label>
+                            <input type="text" class="form-control" name="no_kamar" placeholder="Nomor Kamar"
+                                value="{{ kamar.no_kamar }}" id="inputNama">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTempatTidur">Jumlah Tempat Tidur</label>
+                            <input type="text" class="form-control" name="jumlah_kamar"
+                                placeholder="Jumlah Tempat Tidur" value="{{ kamar.jumlah_kamar }}"
+                                id="inputTempatTidur">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputFasilitas">Fasilitas Kamar</label>
+                            <input type="text" class="form-control" name="fasilitas_kamar" placeholder="Fasilitas Kamar"
+                                value="{{ kamar.fasilitas_kamar }}" id="inputFasilitas">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputHarga">Harga Kamar/hari</label>
+                            <input type="text" class="form-control" name="harga" placeholder="Harga Kamar"
+                                value="{{ kamar.harga }}" id="inputHarga">
+                        </div>
+                        <div class="form-group">
+                            <a href="/admin/kamar/informasi-kamar"><button type="button" class="btn btn-warning"
+                                    style="color: white;">Kembali</button></a>
+
+                            <button type="submit" class="btn btn-info" style="float: right">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

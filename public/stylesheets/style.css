@@ -1,0 +1,7 @@
+body {}
+
+.judul {
+	border-left: 10px solid red;
+	background-color: #e6e6e6;
+	padding-left: 10px;
+}

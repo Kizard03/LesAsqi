@@ -1,0 +1,78 @@
+<nav class="navbar navbar-light bg-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="" style="text-decoration:none; color:#fff;">
+                <h2> <img src="/images/monalisa.jpg" width="40" height="40" class="d-inline-block align-top" alt=""
+                        style="float: left;">&nbsp; Hotel Monalisa</h2>
+            </a>
+        </li>
+    </ul>
+    <form class="form-inline">
+        <h4 style="color: #fff;">Selamat Datang, Admin...</h4>
+    </form>
+    <form class="form-inline">
+        <ul class="nav justify-content-end">
+            <p>&nbsp;</p>
+            <li class="nav-item">
+                <a href="/login" class="btn btn-danger" style="border-radius: 20px">Logout</a>
+            </li>
+        </ul>
+    </form>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+                <ul class="list-group"><br>
+                    <a href="/admin/hotel/informasi-hotel"
+                        class="bg-secondary list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="menu-collapsed" style="color: #fff;">Informasi Hotel</span>
+                        </div>
+                    </a>
+                    <br>
+                    <a href="/admin/kamar/list" data-toggle="collapse" aria-expanded="false"
+                        class=" list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-start align-items-center">
+                            <span class="menu-collapsed">Informasi Kamar</span>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="col" style="padding: 40px">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="search..." aria-label="Search">
+            </form>
+            <a href="/admin/hotel/tambah-hotel"> <button class="btn btn-primary" style="float: right; margin: 5px">+
+                    Tambah</button></a>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">Nama Hotel</th>
+                        <th scope="col">Alamat Hotel</th>
+                        <th scope="col">Opsi</th>
+                    </tr>
+                </thead>
+                {{#each hotel}}
+                <tbody>
+                    <tr style="text-align: center;">
+                        <td>{{ nama_hotel }}</td>
+                        <td>{{ alamat }}</td>
+                        <td>
+                            <a href="/admin/hotel/{{ id }}/delete"><button class="btn btn-danger"
+                                    style="float: right; margin: 5px"
+                                    onclick="return confirm ('Apakah yakin ingin menghapus data ini?')">Hapus</button></a>
+
+                            <a href="/admin/hotel/edit/{{ id }}"><button class="btn btn-warning"
+                                    style="float: right; margin: 5px">Ubah</button></a>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        {{/each}}
+        </table>
+    </div>
+</div>
+</div>
